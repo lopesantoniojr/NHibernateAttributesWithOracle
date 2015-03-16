@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the System.Data.OracleClient.dll provider for Oracle from MS -->
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="NHibernate.GeradorCNARH">
+    <property name="connection.driver_class">NHibernate.Driver.OracleDataClientDriver</property>
+    <property name="connection.connection_string">
+      DATA SOURCE=10.1.13.17:1521/orp7;PASSWORD=copasa;PERSIST SECURITY INFO=True;USER ID=gerha;
+      Pooling=true;
+      Enlist=false;
+      Statement Cache Size=50;
+      Min Pool Size=2;
+      Incr Pool Size=5;
+      Decr Pool Size=2;
+    </property>
+    <property name="dialect">NHibernate.Dialect.Oracle10gDialect</property>
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+    <property name="proxyfactory.factory_class">NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate</property>
+    <property name="cache.provider_class">NHibernate.Cache.HashtableCacheProvider, NHibernate</property>
+  </session-factory>
+</hibernate-configuration>
